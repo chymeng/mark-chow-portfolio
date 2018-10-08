@@ -1,28 +1,71 @@
 import React, { Component } from 'react'
-import profilePicture from './assets/mark.jpg'
-import './App.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import './css/App.css'
+import Home from './components/Home'
+import Header from './components/Header'
+import About from './components/About'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Experience from './components/Experience'
 
 class App extends Component {
+  routes = [
+    {
+      path: '/',
+      exact: true,
+      main: () => <Home />
+    },
+    {
+      path: '/about',
+      exact: true,
+      header: () => <Header />,
+      main: () => <About />
+    },
+    {
+      path: '/projects',
+      exact: true,
+      header: () => <Header />,
+      main: () => <Projects />
+    },
+    {
+      path: '/contact',
+      exact: true,
+      header: () => <Header />,
+      main: () => <Contact />
+    },
+    {
+      path: '/experience',
+      exact: true,
+      header: () => <Header />,
+      main: () => <Experience />
+    }
+  ]
   render() {
     return (
-      <div className="App-container">
-        <div className="app">
-          <img
-            src={profilePicture}
-            alt="Mark Chow professional headshot"
-            className="profile-image"
-          />
-          <h1 className="primary-heading">MARK CHOW</h1>
-          <h2 className="secondary-heading">
-            Marketing student studying at RMIT from Mexico{' '}
-            <span role="img">🇲🇽</span> Currently based in Melbourne on a student
-            visa but looking for exciting opportunities
-          </h2>
-          <h3 className="tertiary-heading">
-            Coming soon... for urgent inquiries, please call 0433 883 222
-          </h3>
+      <Router>
+        <div className="App-container">
+          <div className="app">
+            {this.routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                component={route.header}
+              />
+            ))}
+            <Switch>
+              {this.routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  component={route.main}
+                />
+              ))}
+            </Switch>
+          </div>
         </div>
-      </div>
+      </Router>
     )
   }
 }
