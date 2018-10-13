@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+  width: 100%;
+  .primary-heading {
+    font-family: 'Alex Brush', cursive;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 40px 0 20px 0;
+  }
+  @include breakpoint(md) {
+  }
+}

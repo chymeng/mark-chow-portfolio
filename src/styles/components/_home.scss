@@ -1,0 +1,37 @@
+.home {
+  min-height: 100%;
+  width: 100%;
+  .head {
+    display: flex;
+    justify-content: flex-start;
+    background-color: black;
+    height: 350px;
+    width: 100%;
+    img {
+      margin: 50px auto 0 auto;
+      width: 80%;
+      height: 400px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+  .left {
+    .body {
+      margin-top: 140px;
+    }
+    .primary-heading {
+      font-family: 'Alex Brush', cursive;
+      font-size: 50px;
+      font-weight: 300;
+      margin: 40px 0 20px 0;
+    }
+    .secondary-heading {
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+  }
+  @include breakpoint(md) {
+  }
+}

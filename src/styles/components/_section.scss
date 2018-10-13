@@ -1,0 +1,74 @@
+.section-container {
+  display: flex;
+  width: 100%;
+  min-height: 550px;
+  height: auto;
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 100%;
+    margin: 0 auto;
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    .social-links {
+      width: 100%;
+      margin-top: auto;
+      a {
+        text-decoration: none;
+        margin: auto 10px;
+        .icon-container {
+          width: 25px;
+          height: 25px;
+          .icon {
+            fill: black;
+          }
+          &:hover {
+            .icon {
+              fill: $blue;
+            }
+          }
+        }
+      }
+    }
+    .employers {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+      img {
+        height: 60px;
+        width: auto;
+        margin: 0 10px;
+      }
+    }
+    a {
+      color: black;
+      text-decoration: none;
+      margin: 10px 0;
+      h2 {
+        text-transform: capitalize;
+        font-size: 18px;
+      }
+    }
+    .contact-form {
+      .form {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        input {
+          border-style: solid;
+          border-color: black;
+        }
+        textarea {
+          border-style: solid;
+          border-color: black;
+        }
+      }
+    }
+  }
+  @include breakpoint(md) {
+  }
+}

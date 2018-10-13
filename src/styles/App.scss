@@ -1,0 +1,32 @@
+// contants
+@import './constants/breakpoints';
+@import './constants/colors';
+@import './constants/fonts';
+
+// components
+@import './components/home';
+@import './components/header';
+@import './components/menu';
+@import './components/section';
+
+body {
+  font-family: $primary-font;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: flex;
+  .app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1800px;
+    max-height: 970px;
+    margin: auto auto;
+  }
+}
