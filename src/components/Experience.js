@@ -1,5 +1,5 @@
 import React from 'react'
-import { employers } from '../constants/constants'
+import { employers } from '../helpers/constants'
 
 const Experience = () => {
   return (
@@ -24,8 +24,8 @@ const Experience = () => {
         </p>
         <h3> Past & Current Employers</h3>
         <div className="employers">
-          {employers.map(x => {
-            return <img src={x.icon} alt={x.alt} />
+          {employers.map((x, index) => {
+            return <img key={index} src={x.icon} alt={x.alt} />
           })}
         </div>
       </div>

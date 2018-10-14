@@ -47,7 +47,7 @@ class App extends Component {
       <Router>
         <div className="app-container">
           <div className="app">
-            <Favicon src={favicon} />
+            <Favicon url={favicon} />
             {this.routes.map((route, index) => (
               <Route
                 key={index}

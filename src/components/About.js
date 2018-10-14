@@ -1,6 +1,6 @@
 import React from 'react'
 import Svg from '../components/Svg'
-import { contact } from '../constants/constants'
+import { contact } from '../helpers/constants'
 
 const About = () => {
   return (
@@ -12,7 +12,7 @@ const About = () => {
         <p>
           Currently I am in my penultimate year of my Bachelor’s degree (Major
           in Marketing with a minor in Media and Communications) at The Royal
-          Melbourne Institute of Technology.\
+          Melbourne Institute of Technology.
         </p>
         <p>
           I am looking for opportunities within the marketing industry. The
@@ -20,8 +20,8 @@ const About = () => {
           honour.
         </p>
         <div className="social-links">
-          {contact.map(x => {
-            return <Svg icon={x.icon} a={x.a} />
+          {contact.map((x, index) => {
+            return <Svg key={index} icon={x.icon} a={x.a} />
           })}
         </div>
         <a

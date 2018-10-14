@@ -14,6 +14,8 @@ body {
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  height: 100%;
 }
 
 .app-container {
@@ -26,7 +28,19 @@ body {
     width: 100vw;
     height: 100vh;
     max-width: 1800px;
-    max-height: 970px;
+    max-height: 940px;
     margin: auto auto;
+  }
+  @include breakpoint(md) {
+    width: 100vw;
+    height: 100vh;
+    .app {
+      display: flex;
+      flex-direction: column;
+      max-width: 1800px;
+      max-height: 920px;
+      height: 100%;
+      margin: auto auto;
+    }
   }
 }
