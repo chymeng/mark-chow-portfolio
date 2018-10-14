@@ -53,24 +53,10 @@
         font-size: 18px;
       }
     }
-    .contact-form {
-      .form {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        input {
-          border-style: solid;
-          border-color: black;
-        }
-        textarea {
-          border-style: solid;
-          border-color: black;
-        }
-      }
-    }
     .contact {
       display: flex;
       flex-direction: column;
+      height: auto;
       .social-links {
         width: 100%;
       }
@@ -79,6 +65,7 @@
         .form {
           display: flex;
           flex-direction: column;
+          height: auto;
           border: 1px solid $light-black;
           padding: 5%;
           border-radius: 5px;

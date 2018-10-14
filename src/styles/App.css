@@ -141,19 +141,10 @@
       .section-container .section a h2 {
         text-transform: capitalize;
         font-size: 18px; }
-    .section-container .section .contact-form .form {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid black; }
-      .section-container .section .contact-form .form input {
-        border-style: solid;
-        border-color: black; }
-      .section-container .section .contact-form .form textarea {
-        border-style: solid;
-        border-color: black; }
     .section-container .section .contact {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      height: auto; }
       .section-container .section .contact .social-links {
         width: 100%; }
       .section-container .section .contact .form-container {
@@ -161,6 +152,7 @@
         .section-container .section .contact .form-container .form {
           display: flex;
           flex-direction: column;
+          height: auto;
           border: 1px solid #1d1b1b;
           padding: 5%;
           border-radius: 5px; }
