@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { links } from '../constants/constants'
+import { links } from '../helpers/constants'
 
 const Menu = () => {
   return (
