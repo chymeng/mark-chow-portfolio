@@ -9,6 +9,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Experience from './components/Experience'
+import Secret from './components/Secret'
 
 class App extends Component {
   routes = [
@@ -40,6 +41,12 @@ class App extends Component {
       exact: true,
       header: () => <Header />,
       main: () => <Experience />
+    },
+    {
+      path: '/behind-the-scenes',
+      exact: true,
+      header: () => <Header />,
+      main: () => <Secret />
     }
   ]
   render() {

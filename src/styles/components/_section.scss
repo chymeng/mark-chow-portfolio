@@ -158,6 +158,13 @@
         }
       }
     }
+    .secret {
+      img {
+        width: 80%;
+        height: 80%;
+        border-radius: 5px;
+      }
+    }
   }
   @include breakpoint(md) {
     width: 60%;
